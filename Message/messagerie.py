@@ -50,7 +50,7 @@ else:
     except:
         messages = []
 
-    st.title("💬 Messagerie perso avec Papa")
+    st.title("💬 Messagerie priver")
 
     st.write("💬 Messages :")
     for m in messages:
