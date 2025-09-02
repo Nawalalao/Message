@@ -52,6 +52,11 @@ else:
 
     st.title("💬 Messagerie perso avec Papa")
 
+    st.write("💬 Messages :")
+    for m in messages:
+        st.write(f"**{m['nom']}** : {m['message']}")
+
+
     msg = st.text_area("Écris ton message ici :")
 
     if st.button("Envoyer"):
@@ -62,7 +67,3 @@ else:
         with open("messages.json", "w", encoding="utf-8") as f:
             json.dump(messages, f)
         st.success("Message envoyé !")
-
-    st.write("💬 Messages :")
-    for m in messages:
-        st.write(f"**{m['nom']}** : {m['message']}")
